@@ -11,8 +11,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
-
-        missingDimensionStrategy 'featureScope', 'publicAPI'
     }
 
     buildTypes {
