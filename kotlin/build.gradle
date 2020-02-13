@@ -25,10 +25,17 @@ allprojects {
 subprojects {
     afterEvaluate { project ->
         if (project.hasProperty("dependencies")) {
+
             dependencies {
                 implementation "com.android.support:appcompat-v7:$andSupportLibVersion"
                 implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
                 implementation "androidx.multidex:multidex:$multidexVersion"
+                // avoid circular dependency and
+                // disambiguate between lambda capture project
+                // and the top level context project method
+                if (project != getRootProject().project(":arcgis-android")) {
+                    implementation getRootProject().project(":arcgis-android")
+                }
             }
         }
         project.android {
@@ -38,6 +45,7 @@ subprojects {
             }
             defaultConfig {
                 multiDexEnabled true
+                missingDimensionStrategy 'featureScope', 'publicAPI'
             }
         }
     }
