@@ -17,7 +17,6 @@
 
 package com.esri.arcgisruntime.sample.authenticatewithoauth
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -30,6 +29,7 @@ import com.esri.arcgisruntime.security.DefaultAuthenticationChallengeHandler
 import com.esri.arcgisruntime.security.OAuthConfiguration
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.MalformedURLException
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
       mapView.apply {
         map = ArcGISMap(portalItem)
       }
-    } catch (e : MalformedURLException) {
+    } catch (e: MalformedURLException) {
       logError("Error in OAuthConfiguration URL: " + e.message)
     }
   }
