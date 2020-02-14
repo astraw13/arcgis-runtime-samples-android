@@ -25,4 +25,9 @@ include ':add-features-feature-service',
         ':show-labels-on-layer',
         ':token-authentication',
         ':view-point-cloud-data-offline',
-        ':wmts-layer'
+        ':wmts-layer',
+        ':arcgis-android'
+
+
+//path to your personal arcgis-android repo relative to this dir (this dir is "the kotlin dir")
+project(":arcgis-android").projectDir = file("../../../devtopia/java/arcgis-android")
