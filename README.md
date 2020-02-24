@@ -1,6 +1,8 @@
 # Overview
 ArcGIS Runtime SDK for Android v100.7.0 samples.  The `master` branch of this repository contains sample app modules for the latest available version of the [ArcGIS Runtime SDK for Android](https://developers.arcgis.com/android/). Samples released under older versions can be found through the [git tags](https://github.com/Esri/arcgis-runtime-samples-android/tags).  Please read our [wiki](https://github.com/Esri/arcgis-runtime-samples-android/wiki) for help with working with this repository.  
 
+Andrew Straw's edited and special changes to the file. 
+
 # Prerequisites
 * The samples are building with `compileSdkVersion 28`
 * [Android Studio](http://developer.android.com/sdk/index.html)
